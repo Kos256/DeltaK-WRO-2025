@@ -23,8 +23,27 @@ while True:
     cv2.circle(frame, (cx, cy), 5, (0, 255, 255), 2)
 
     colorName = "none"
-    if h > 0.29 and h < 0.35: colorName = "green"
-    if h > 0.986 or h < 0.0189: colorName = "red"
+    if v < 50:
+        colorName = "Black"
+    elif s < 40 and v > 50 and v < 200:
+        colorName = "Grey"
+    elif s < 40 and v >= 200:
+        colorName = "White"
+    else:
+        if (h <= 10) or (h >= 170):
+            colorName = "Red"
+        elif 11 <= h <= 25:
+            colorName = "Orange"
+        elif 26 <= h <= 34:
+            colorName = "Yellow"  # optional if you want yellow too
+        elif 35 <= h <= 85:
+            colorName = "Green"
+        elif 86 <= h <= 125:
+            colorName = "Blue"
+        elif 126 <= h <= 169:
+            colorName = "Magenta"
+        else:
+            colorName = "Unknown"
 
     # First line (HSV)
     cv2.putText(frame, f"H: {h}  S: {s}  V: {v}", (10, 30),
