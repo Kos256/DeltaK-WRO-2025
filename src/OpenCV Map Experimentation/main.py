@@ -1,27 +1,14 @@
 import cv2
+import numpy as np
 
 # Open webcam
 cap = cv2.VideoCapture(2)
+cap.set(3, 640)  # Width
+cap.set(4, 480)  # Height
 
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
+_wName = "OpenCV BotCam Spy"
 
-    # Get frame dimensions and center coordinates
-    height, width, _ = frame.shape
-    cx, cy = width // 2, height // 2
-
-    # Convert frame to HSV
-    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-    # Get HSV value at center pixel
-    hsv_value = hsv_frame[cy, cx]
-    h, s, v = hsv_value
-
-    # Draw a circle at the center
-    cv2.circle(frame, (cx, cy), 5, (0, 255, 255), 2)
-
+def getColor(h, s, v):
     colorName = "none"
     if v < 50:
         colorName = "Black"
@@ -45,18 +32,64 @@ while True:
         else:
             colorName = "Unknown"
 
-    # First line (HSV)
-    cv2.putText(frame, f"H: {h}  S: {s}  V: {v}", (10, 30),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+    return colorName
 
-    # Second line (Color name)
-    cv2.putText(frame, f"Color: {colorName}", (10, 60),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+mposx, mposy = 0, 0
+def mouse_callback(event, x, y, flags, param):
+    global mposx, mposy
+    if event == cv2.EVENT_MOUSEMOVE:
+        mposx, mposy = x, y
 
-    # Show the frame
-    cv2.imshow("HSV Viewer", frame)
+cv2.namedWindow(_wName)
+cv2.setMouseCallback(_wName, mouse_callback)
 
-    # Press 'q' to quit
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # HSV thresholds
+    lower_red1 = np.array([0, 100, 100])
+    upper_red1 = np.array([10, 255, 255])
+    lower_red2 = np.array([170, 100, 100])
+    upper_red2 = np.array([179, 255, 255])
+    lower_green = np.array([35, 100, 100])
+    upper_green = np.array([85, 255, 255])
+
+    # Masks
+    red_mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
+    red_mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
+    red_mask = cv2.bitwise_or(red_mask1, red_mask2)
+    green_mask = cv2.inRange(hsv, lower_green, upper_green)
+
+    # Find contours for red
+    contours_red, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    for cnt in contours_red:
+        area = cv2.contourArea(cnt)
+        if area > 500:  # Minimum cluster size
+            x, y, w, h = cv2.boundingRect(cnt)
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            cv2.putText(frame, "Red", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+
+    # Find contours for green
+    contours_green, _ = cv2.findContours(green_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    for cnt in contours_green:
+        area = cv2.contourArea(cnt)
+        if area > 500:  # Minimum cluster size
+            x, y, w, h = cv2.boundingRect(cnt)
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(frame, "Green", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+
+    # Display color at mouse pixel
+    if mposx < 640-1 and mposx > 0 and mposy < 480-1 and mposy > 0:
+        #h, s, v = hsv[mposx, mposy]
+        cv2.rectangle(frame, (mposx - 5, mposy - 5), (mposx + 5, mposy + 5), (255, 255, 255), 2)
+        cv2.rectangle(frame, (mposx - 3, mposy - 3), (mposx + 3, mposy + 3), (0, 0, 0), 2)
+
+    cv2.imshow(_wName, frame)
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
