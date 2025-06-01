@@ -8,6 +8,9 @@ cap.set(4, 480)  # Height
 
 _wName = "OpenCV BotCam Spy"
 
+def clamp(v, minv, maxv):
+    return max(minv, min(v, maxv))
+
 def getColor(h, s, v):
     colorName = "none"
     if v < 50:
@@ -83,10 +86,12 @@ while True:
             cv2.putText(frame, "Green", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
     # Display color at mouse pixel
-    if mposx < 640-1 and mposx > 0 and mposy < 480-1 and mposy > 0:
-        #h, s, v = hsv[mposx, mposy]
-        cv2.rectangle(frame, (mposx - 5, mposy - 5), (mposx + 5, mposy + 5), (255, 255, 255), 2)
-        cv2.rectangle(frame, (mposx - 3, mposy - 3), (mposx + 3, mposy + 3), (0, 0, 0), 2)
+    mposx = clamp(mposx, 0, 640-1)
+    mposy = clamp(mposy, 0, 480-1)
+    h, s, v = hsv[mposy, mposx]
+    cv2.putText(frame, f"({mposx}, {mposy}) is {getColor(h, s, v)}", (mposx, mposy - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+    cv2.rectangle(frame, (mposx - 5, mposy - 5), (mposx + 5, mposy + 5), (255, 255, 255), 2)
+    cv2.rectangle(frame, (mposx - 3, mposy - 3), (mposx + 3, mposy + 3), (0, 0, 0), 2)
 
     cv2.imshow(_wName, frame)
 
