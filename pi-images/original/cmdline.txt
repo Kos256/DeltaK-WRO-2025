@@ -1,0 +1,1 @@
+console=tty1 console=serial0,115200 root=PARTUUID=6a171afa-02 rootfstype=ext4 fsck.repair=yes rootwait cfg80211.ieee80211_regdom=PK quiet splash plymouth.ignore-serial-consoles
