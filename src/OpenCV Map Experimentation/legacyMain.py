@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Open webcam
-cap = cv2.VideoCapture(2) # DO NOT IGNORE: REPLACE 2 WITH 0 IF RUNNING ON THE RASPBERRY PI
+cap = cv2.VideoCapture(2)
 cap.set(3, 640)  # Width
 cap.set(4, 480)  # Height
 
@@ -35,7 +35,7 @@ def getColor(h, s, v):
         else:
             colorName = "Unknown"
 
-    return colorName.lower()
+    return colorName
 
 mposx, mposy = 0, 0
 def mouse_callback(event, x, y, flags, param):
