@@ -53,14 +53,14 @@ void loop() {
       steer(-10);
       mspd(FWD, 255);
 
-      int fwdDelay = 1000;
-      if (i == 1) fwdDelay = 700;
-      if (i == 1 and lap == 1) fwdDelay = 1200;
+      int fwdDelay = 1000; // previously 1000
+//      if (i == 1) fwdDelay = 700;
+//      if (i == 1 and lap == 1) fwdDelay = 1200;
       delay(fwdDelay);
     
       steer(50); // previously 50
       mspd(FWD, 170); // previously 150;
-      delay(2200);
+      delay(1200); // previously 2200
     }
   }
   

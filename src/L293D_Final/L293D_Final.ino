@@ -6,11 +6,13 @@
 #define BRK 3
 #define REL 4
 
-// USRT, USRE, USLT, USLE (ultrasonic right/left trig/echo)
+// USRT, USRE, USLT, USLE, USUT, USUE (ultrasonic right/left/up trig/echo)
 #define USRT A0
 #define USRE A1
 #define USLT A2
 #define USLE A3
+#define USUT A4
+#define USUE A5
 #define US_BUFSIZE 30
 
 bool _ZEROCHECK = false;
@@ -29,11 +31,26 @@ void steer(int dir) {
   svo.write(map(dir, 100, -100, 0, 180));
 }
 
+void shiftArray(float* arr) {
+  for (int i = 0; i < US_BUFSIZE-1; ++i) {
+    arr[i] = arr[i + 1];
+  }
+}
+
+
 void setup() {
   Serial.begin(38400);
+  Serial.print("-start-");
   svo.attach(9);
   motor.setSpeed(200);
   motor.run(RELEASE);
+
+  pinMode(A0, OUTPUT);
+//  pinMode(A1, INPUT);
+  pinMode(A2, OUTPUT);
+//  pinMode(A3, INPUT);
+  pinMode(A4, OUTPUT);
+//  pinMode(A5, INPUT);
 
   if (_ZEROCHECK) {
     svo.write(90);
@@ -48,54 +65,53 @@ void dl(bool o) {
   digitalWrite(13, o);
 }
 
-//// Circular buffers for left and right distance measurements
-float buf_distL[US_BUFSIZE];
-int buf_idx_L = 0;
-int buf_count_L = 0;
+float buf_dl[30];
+float buf_dr[30];
+float buf_du[30];
 
-float buf_distR[US_BUFSIZE];
-int buf_idx_R = 0;
-int buf_count_R = 0;
+// buffer average
+float bufavg(float* arr) {
+  int length = US_BUFSIZE;
+  
+  if (length == 0) { // handle edge case where array is empty
+    return 0.0f; // or some other default value that makes sense
+  }
 
-int head = 0; // Initialize the head pointer to the start of the buffer
-int tail = 0; // Initialize the tail pointer to the start of the buffer
-int count = 0; // Initialize the count variable
+  float sum = 0.0f;
+  for (int i = 0; i < length; ++i) {
+    sum += arr[i];
+  }
 
-//void add(float value) {
-//  // Add element to the end of the buffer (circularly)
-//  buf_distR[head] = value;
-//  head = (head + 1) % US_BUFSIZE;
-//  if (count < US_BUFSIZE) count++;
-//}
-//
-//float average() {
-//  float sum = 0.0f;
-//  for (int i = tail; i != head; ++i) {
-//    sum += buf_distR[i];
-//  }
-//  // Add the last element in case it's not wrapped around
-//  if (head > tail) {
-//    sum += buf_distR[tail];
-//  } else {
-//    // Handle wraparound case
-//    for (int i = US_BUFSIZE - 1; i >= tail; --i) {
-//      sum += buf_distR[i];
-//    }
-//  }
-//  return sum / count;
-//}
-long measureDist(bool isRightSensor) {
-  // Set the trigger pin to LOW for 10us to ensure it's in a known state
-  digitalWrite(isRightSensor ? USRT : USLT, LOW);
+  return sum / length;
+}
+
+float measureDist(int sensor) {
+  
+  //              T  E
+  int uPins[2] = {0, 0};
+  
+  if (sensor < 0) {
+    uPins[0] = USLT;
+    uPins[1] = USLE;
+  }
+  if (sensor == 0) {
+    uPins[0] = USUT;
+    uPins[1] = USUE;
+  }
+  if (sensor > 0) {
+    uPins[0] = USRT;
+    uPins[1] = USRE;
+  }
+  
+  // send pulse
+  digitalWrite(uPins[0], LOW);
   delayMicroseconds(10);
-
-  // Send a HIGH pulse to trigger the sensor
-  digitalWrite(isRightSensor ? USRT : USLT, HIGH);
+  digitalWrite(uPins[0], HIGH);
   delayMicroseconds(2);
-  digitalWrite(isRightSensor ? USRT : USLT, LOW);
+  digitalWrite(uPins[0], LOW);
 
   // Start timing after the HIGH pulse
-  long duration = pulseIn(isRightSensor ? USRE : USLE, HIGH, 70000UL);
+  long duration = pulseIn(uPins[1], HIGH, 50000UL);
 
   if (duration == -1) {
     // Timeout occurred, return -1.0f
@@ -104,109 +120,94 @@ long measureDist(bool isRightSensor) {
   else {
     // Calculate distance using the formula: distance = speed * time / 2
     float distance = (duration * 0.034 / 2);
-    Serial.println("long dur: " + String(distance));
 
-    if (isRightSensor) {
-      buf_distR[buf_idx_R] = distance;
-      buf_count_R++;
-      buf_idx_R++;
-
-      // Reset counter when full
-      if (buf_count_R >= US_BUFSIZE) {
-        buf_count_R = 0;
-      }
-
-      // Calculate moving average for sensor
-      float sum = 0.0f;
-      int count = 0;
-
-      // perform avg
-      for (int i = 0; i < US_BUFSIZE; i++) {
-        if (buf_distL[i] != -1) { // Ignore invalid readings
-          sum += buf_distL[i];
-          count++;
-        }
-      }
-
-      // overwrite and apply averaged value
-      distance = (count > 0) ? sum / count : distance;
+    if (sensor < 0) {
+      shiftArray(buf_dl);
+      buf_dl[US_BUFSIZE - 1] = distance;
+      distance = bufavg(buf_dl);
     }
-    else { // is left sensor
-      buf_distL[buf_idx_L] = distance;
-      buf_count_L++;
-      buf_idx_L++;
-
-      // Reset counter when full
-      if (buf_count_L >= US_BUFSIZE) {
-        buf_count_L = 0;
-      }
-
-      // Calculate moving average for sensor
-      float sum = 0.0f;
-      int count = 0;
-
-      // perform avg
-      for (int i = 0; i < US_BUFSIZE; i++) {
-        if (buf_distR[i] != -1) { // Ignore invalid readings
-          sum += buf_distR[i];
-          count++;
-        }
-      }
-
-      // overwrite and apply averaged value
-      distance = (count > 0) ? sum / count : distance;
+    if (sensor == 0) {
+      shiftArray(buf_du);
+      buf_du[US_BUFSIZE - 1] = distance;
+      distance = bufavg(buf_du);
+    }
+    if (sensor > 0) {
+      shiftArray(buf_dr);
+      buf_dr[US_BUFSIZE - 1] = distance;
+      distance = bufavg(buf_dr);
     }
 
     return distance;
   }
-
-  
 }
 
 void loop() {
-//  motor.run(dir?FORWARD:BACKWARD);
-//  for (int i = 0; i < 180; i++) {
-//    svo.write(i);
-//    delay(4);
-//  }
-//  for (int i = 0; i < 180; i++) {
-//    svo.write(180-i);
-//    delay(4);
-//  }
-//  dir = !dir;
-
-
-//  while(1) Serial.println(measureDist(true));
   
-  for (int lap = 0; lap < 3; lap++) {
-    for (int i = 0; i < 4; i++) {
-      steer(-10);
-      mspd(FWD, 255);
+//  while(0) {
+//    Serial.println(measureDist(1));
+////    digitalWrite(USLT, LOW);
+////    delayMicroseconds(10);
+////    digitalWrite(USLT, HIGH);
+////    delayMicroseconds(2);
+////    digitalWrite(USLT, LOW);
+////  
+////    // Start timing after the HIGH pulse
+////    long duration = pulseIn(USLE, HIGH, 50000UL);
+////    Serial.println(duration);
+////  }
 
-      if (lap == 0 and i == 0) delay(600);
-      float distR = measureDist(true);
+  // > ??
+  // < 90
+
+  Serial.println("began program");
+
+  for (int i = 0; i < 30; i++) {
+    measureDist(0);
+  }
+  
+  while (1)//for (int lap = 0; lap < 3; lap++) {
+    while (1) //for (int i = 0; i < 4; i++) {
+      steer(-10);
+      mspd(FWD, 200);
+
+//      if (lap == 0 and i == 0) delay(600);
+
+      float distF = measureDist(0);
+      float distR = measureDist(1);
+//      float distL = measureDist(-1);
       while(1) {
-        distR = measureDist(true);
-        Serial.println("gotten: " + String(distR));
-        if (distR > 70) { // wall is not in sight?
-          if (distR < 9000) { // check if its not a false spike
-            break;
+        distR = measureDist(1);
+        distF = measureDist(0);
+        Serial.println("gotten: " + String(distF));
+        if (distF < 80) { // is front wall close enough?
+          distR = measureDist(1);
+          if ((distR) > 90) { // is right wall in sight?
+            dir = true; // if so, direction should be set to right
           }
+          else {
+            dir = false; // if not, direction should be set to left
+          }
+          break;
         }
       }
 
-      delay(100);
+      Serial.println("rt dist at fwd" + String(distR));
+      // brake + reverse
+      mspd(BWD, 170); // previously (150 then 170 then 200);
+      delay(700); // previously (2200 (with 170 speed))
       
 //      int fwdDelay = 1000;
 //      if (i == 1) fwdDelay = 700;
 //      if (i == 1 and lap == 1) fwdDelay = 1200;
 //      delay(fwdDelay);
     
-      steer(50); // previously 50
+      steer(dir ? 50 : -80); // previously 50
       mspd(FWD, 200); // previously (150 then 170);
-      delay(2000); // previously (2200 (with 170 speed))
-    }
-  }
+//      delay(dir ? 2000 : 2000); // previously (2200 (with 170 speed))
+      for (int i = 0; i < 30; i++) {
+        delay(dir ? (1200/30) : (1600/30));
+        buf_du[i] = 110.0;
+      }
   
   steer(0);
   mspd(FWD, 255); delay(750);
