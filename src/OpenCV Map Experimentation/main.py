@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Open webcam
-cap = cv2.VideoCapture(2)  # Replace 2 with 0 on Raspberry Pi
+cap = cv2.VideoCapture(0)  # Replace 2 with 0 on Raspberry Pi
 width, height = 640, 480
 cap.set(3, width)
 cap.set(4, height)
@@ -40,9 +40,9 @@ def getColor(h, s, v):
             colorName = "Yellow"
         elif 35 <= h <= 85:
             colorName = "Green"
-        elif 86 <= h <= 125:
+        elif 86 <= h <= 145:
             colorName = "Blue"
-        elif 126 <= h <= 169:
+        elif 145 <= h <= 169:
             colorName = "Magenta"
         else:
             colorName = "Unknown"
@@ -70,8 +70,10 @@ while True:
     upper_red1 = np.array([8, 255, 255])
     lower_red2 = np.array([170, 100, 100])
     upper_red2 = np.array([179, 255, 255])
-    lower_green = np.array([35, 100, 100])
-    upper_green = np.array([85, 255, 255])
+    # lower_green = np.array([35, 100, 100])
+    # upper_green = np.array([85, 255, 255])
+    lower_green = np.array([35, 80, 100])
+    upper_green = np.array([130, 255, 255])
 
     # Masks
     red_mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
