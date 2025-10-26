@@ -1,7 +1,7 @@
 <center><h1> Delta K - WRO 2025 Future Engineers </h1></center>
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM BANNER IMAGE HERE ⚠️⚠️⚠️ -->
-![Banner](./DeltaK_githubbanner.png)
+![Banner](./misc/DeltaK_githubbanner.png)
 
 [![Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)](#)
 <!-- ⚠️⚠️⚠️ REMINDER: ADD SOCIAL MEDIA LINKS (Instagram, YouTube, etc.) ⚠️⚠️⚠️ -->
@@ -388,7 +388,7 @@ The custom motor is controlled via the **XRP Controller Board**, which features:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD CHASSIS PHOTOS (top view, bottom view, exploded view if available) ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/chassis-top.jpg" alt="Chassis Top View" width="80%">
+  <img src="/misc/Main Body Drawing.png" alt="Chassis View" width="80%">
 </p>
 
 ### Design Evolution
