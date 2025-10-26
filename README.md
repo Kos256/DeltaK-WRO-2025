@@ -388,7 +388,7 @@ The custom motor is controlled via the **XRP Controller Board**, which features:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD CHASSIS PHOTOS (top view, bottom view, exploded view if available) ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="/misc/mainbody_drawing.png" alt="Chassis View" width="80%">
+  <img src="misc/mainbody_drawing.png" alt="Chassis View" width="80%">
 </p>
 
 ### Design Evolution
