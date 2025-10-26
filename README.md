@@ -318,7 +318,7 @@ The custom motor design eliminates the need for a differential while providing:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD STEERING MECHANISM PHOTOS AND DIAGRAMS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/steering-system.jpg" alt="Steering System" width="80%">
+  <img src="./misc/frontassembly_drawing" alt="Steering System" width="80%">
 </p>
 
 ### Parallel Linkage Design
@@ -388,7 +388,7 @@ The custom motor is controlled via the **XRP Controller Board**, which features:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD CHASSIS PHOTOS (top view, bottom view, exploded view if available) ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="/misc/Main Body Drawing.png" alt="Chassis View" width="80%">
+  <img src="/misc/mainbody_drawing.png" alt="Chassis View" width="80%">
 </p>
 
 ### Design Evolution
