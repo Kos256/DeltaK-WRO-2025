@@ -318,7 +318,7 @@ The custom motor design eliminates the need for a differential while providing:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD STEERING MECHANISM PHOTOS AND DIAGRAMS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./misc/frontassembly_drawing" alt="Steering System" width="80%">
+  <img src="misc/frontassembly_drawing" alt="Steering System" width="80%">
 </p>
 
 ### Parallel Linkage Design
