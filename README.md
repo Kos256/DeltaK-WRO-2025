@@ -185,7 +185,7 @@ Delta Bot represents our team's sixth month of intensive engineering, combining 
 
 **Key Specifications:**
 - **Dimensions:** [Length] cm x [Width] cm x [Height] cm
-- **Weight:** [X] grams
+- **Weight:** ~1 KG
 - **Brain:** Raspberry Pi 5 (8-core CPU, 8GB RAM)
 - **Vision:** PiCam2 with OpenCV processing
 - **Mapping:** RPLidar A2M12 (360° scanning, 12m range)
@@ -201,9 +201,8 @@ Delta Bot represents our team's sixth month of intensive engineering, combining 
 
 <!-- ⚠️⚠️⚠️ REMINDER: UPLOAD COMPETITION/TESTING VIDEO TO YOUTUBE AND ADD LINK HERE ⚠️⚠️⚠️ -->
 
-Watch Delta Bot in action:
-
-[Youtube video link to be added]
+Watch Delta Bot in action [here](https://https://google.com)
+**(link to youtube video has yet to be added)**
 
 **Competition Performance Highlights:**
 - **Qualification Round Best Time:** 14 seconds
@@ -1025,33 +1024,56 @@ Each sensor compensates for others' weaknesses:
 
 ### Raspberry Pi 5 ↔ XRP Board (UART Serial)
 
-**Connection:**
+<!--
 - **Pi 5 TX** (GPIO 14) → **XRP RX**
 - **Pi 5 RX** (GPIO 15) → **XRP TX**
-- **Baud Rate:** 115200
-- **Protocol:** ASCII commands with newline termination
+-->
+The XRP board is connected to one of the USB 3.0 ports on the Pi 5 via a micro-usb cable. This is the main serial connection between the hardware controller and the main processor.
+- **Baud Rate:** 230400
+- **Protocol:** Plain text commands with basic formatting.
 
 **Command Structure:**
 
 **Pi 5 → XRP (Commands):**
 ```
-MOTOR:<speed>       # Set motor speed (-100 to 100)
-SERVO:<angle>       # Set steering angle (-45 to 45)
-STOP                # Emergency stop
-GET_IMU             # Request IMU data
-GET_ENCODER         # Request encoder position
+motor: <speed> (Set motor speed from -100 to 100)
+servo: <angle> (Send a servo angle from 0 to 180 which sets a steering angle from -45 to 45)
+
+Example: "<motor: 80; servo: -1>"
+Move forward at 80% speed and keep servo free/inactive
 ```
 
 **XRP → Pi 5 (Responses):**
+The responding input data is structured as followed:
+```py
+outputData = {
+    'i': i,
+    # 'dist': rangefinder.distance(),
+    # 'accel': f"{imu.get_acc_x()}, {imu.get_acc_y()}, {imu.get_acc_z()}",
+    # 'gyro': f"{imu.get_roll()}, {imu.get_heading()}, {imu.get_yaw()}",
+    # 'gyrorate': f"{imu.get_gyro_x_rate()}, {imu.get_gyro_y_rate()}, {imu.get_gyro_z_rate()}"
+    'accel': f"{imu.get_acc_x()}, {imu.get_acc_y()}",
+    'gyroHeading': imu.get_heading(),
+    # 'gyroHeadingRate': imu.get_gyro_y_rate()
+    'distL': usLeft.distance(),
+    'distR': usRight.distance()
+}
 ```
-IMU:<heading>,<angular_velocity>
+A lot of desirable but unnecessary sensor values are commented out, just in case we need to send them.
+```
+accel: <x> <y>          (Provides the accelerometer's X and Y acceleration values)
 ENCODER:<position>,<speed>
+gyroHeading: <heading>  (Provides the heading of the robot reported by the onboard gyro sensor)
+distL: <distance_cm>    (Reports left ultrasonic sensor's distance in centimeters)
+distR: <distance_cm>    (Reports right ultrasonic sensor's distance in centimeters)
 ACK:<command>       # Acknowledge command received
 ```
 
+This conversation between the Pi 5 and XRP happen without thread blocking, which means sensor values can be fetched and motor instructions can be sent at any time.
+
 **Error Handling:**
-- Timeouts if no response within 100ms
-- Checksum validation (optional)
+There isn't much error handling as there's not many factors of failure here, since the XRP's code is single threaded and stable. Here's what *is* checked:
+- Ignore input if command's syntax is invalid.
 - Automatic reconnection on communication failure
 
 ---
