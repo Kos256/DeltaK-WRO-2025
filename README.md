@@ -1,7 +1,7 @@
 <center><h1> Delta K - WRO 2025 Future Engineers </h1></center>
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM BANNER IMAGE HERE ⚠️⚠️⚠️ -->
-![Banner](./misc/DeltaK_githubbanner.png)
+![Banner](./misc/banner.png)
 
 [![Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)](#)
 <!-- ⚠️⚠️⚠️ REMINDER: ADD SOCIAL MEDIA LINKS (Instagram, YouTube, etc.) ⚠️⚠️⚠️ -->
