@@ -517,7 +517,7 @@ After struggling with Arduino Uno (insufficient processing power and poor camera
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD XRP BOARD PHOTO AND CONNECTION DIAGRAM ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/xrp-board.jpg" alt="XRP Controller Board" width="60%">
+  <img src="misc/XRPBoard_img.jpeg" alt="XRP Controller Board" width="60%">
 </p>
 
 The **XRP (Experiential Robotics Platform) Controller Board** serves as the motor control and sensor interface subsystem.
