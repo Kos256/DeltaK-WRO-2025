@@ -364,7 +364,7 @@ While not true Ackermann steering (which would provide optimal tire scrub reduct
 The rear axle is the mechanical heart of Delta Bot, directly connecting both rear wheels through the custom motor assembly.
 
 **Axle Design:**
-- **Material:** [Specify material - steel rod, aluminum, 3D printed composite?]
+- **Material:** 3D Printed in PLA
 - **Diameter:** [Specify diameter in mm]
 - **Length:** Spans the full width of the chassis, passing through the motor housing
 - **Bearings:** 3D printed bearing holders on each side maintain axle alignment
@@ -479,7 +479,7 @@ Delta Bot's sensor suite represents a comprehensive approach to environmental aw
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RASPBERRY PI 5 INSTALLATION PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/raspberry-pi-5.jpg" alt="Raspberry Pi 5" width="60%">
+  <img src="misc/raspberrypi5_img.jpg" alt="Raspberry Pi 5" width="60%">
 </p>
 
 The **Raspberry Pi 5** serves as Delta Bot's main brain, handling all high-level processing tasks.
