@@ -325,6 +325,7 @@ The custom motor design eliminates the need for a differential while providing:
 After experimenting with Ackermann steering and direct servo-to-wheel connections, we settled on a **parallel linkage mechanism** for its simplicity, reliability, and sufficient turning radius.
 <p align="center">
    <img src="misc/Parallel_linkage_drawing.png" alt="Parallel Linkage View" width="80%">
+   <img src="misc/Linkage_Drawing.png" alt="Linkage View" width="80%">
 </p>
 **Key Components:**
 - **SG90 9g Micro Servo Motor**
