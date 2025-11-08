@@ -480,6 +480,7 @@ Delta Bot's sensor suite represents a comprehensive approach to environmental aw
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RASPBERRY PI 5 INSTALLATION PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
   <img src="misc/raspberrypi5_img.jpg" alt="Raspberry Pi 5" width="60%">
+  <img src="misc/pi5pinout.png" alt="Raspberry Pi 5 Pin Out" width="60%">
 </p>
 
 The **Raspberry Pi 5** serves as Delta Bot's main brain, handling all high-level processing tasks.
