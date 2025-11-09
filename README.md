@@ -597,7 +597,7 @@ The Pi 5 runs **OpenCV** (Python) for real-time image processing:
 
 ### Lidar Mount Drawing
 
-  <img src="misc/LidarMount_drawing.png.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
+  <img src="misc/LidarMount_drawing.png" alt="RPLidar A2M12 on Delta Bot" width="60%">
 </p>
 
 The **RPLidar A2M12** is Delta Bot's primary navigation sensor, providing 360-degree environmental mapping.
