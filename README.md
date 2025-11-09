@@ -559,7 +559,7 @@ The XRP board communicates with the Raspberry Pi 5 via **serial UART** connectio
 
 
 
-  <img src="misc/toppart_drawing.png" alt="PiCam2 Mounted on Delta Bot" width="60%">
+  <img src="misc/toppart_drawing.png" alt="PiCam2 Mounted on Delta Bot" width="60%" align="center">
 </p>
 
 **Specifications:**
