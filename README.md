@@ -710,7 +710,7 @@ The IMU provides **absolute angular velocity measurement** independent of wheel 
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD ULTRASONIC SENSOR MOUNTING PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/ultrasonic-sensor.jpg" alt="HC-SR04 Ultrasonic Sensor" width="60%">
+  <img src="misc/Ultrasonic_img.jpg" alt="HC-SR04 Ultrasonic Sensor" width="60%">
 </p>
 
 **Technical Specifications:**
