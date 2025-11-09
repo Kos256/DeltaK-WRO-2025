@@ -593,10 +593,9 @@ The Pi 5 runs **OpenCV** (Python) for real-time image processing:
   <img src="misc/Lidarimg.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
 </p>
 
-<p align="center">
-
 ### Lidar Mount Drawing
 
+<p align="center">
   <img src="misc/LidarMount_drawing.png" alt="RPLidar A2M12 on Delta Bot" width="60%">
 </p>
 
