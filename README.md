@@ -557,7 +557,7 @@ The XRP board communicates with the Raspberry Pi 5 via **serial UART** connectio
   
 ### Camera Mount Drawing
 
-   
+
 <p align="center">
   <img src="misc/toppart_drawing.png" alt="PiCam2 Mounted on Delta Bot" width="60%">
 </p>
@@ -590,7 +590,14 @@ The Pi 5 runs **OpenCV** (Python) for real-time image processing:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RPLIDAR MOUNTING PHOTO AND SCANNING VISUALIZATION ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/rplidar-mount.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
+  <img src="misc/Lidarimg.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
+</p>
+
+<p align="center">
+
+### Lidar Mount Drawing
+
+  <img src="misc/LidarMount_drawing.png.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
 </p>
 
 The **RPLidar A2M12** is Delta Bot's primary navigation sensor, providing 360-degree environmental mapping.
