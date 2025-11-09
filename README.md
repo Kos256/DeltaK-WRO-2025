@@ -480,9 +480,12 @@ Delta Bot's sensor suite represents a comprehensive approach to environmental aw
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RASPBERRY PI 5 INSTALLATION PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
   <img src="misc/raspberrypi5_img.jpg" alt="Raspberry Pi 5" width="60%">
+</p>
+
 
 ### Raspberry Pi 5 Pinout <a class="anchor" id="raspberry-pi-5"></a>
 
+<p align="center">
   <img src="misc/pi5pinout.png" alt="Raspberry Pi 5 Pin Out" width="60%">
 </p>
 
