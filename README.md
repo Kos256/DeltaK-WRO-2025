@@ -480,6 +480,9 @@ Delta Bot's sensor suite represents a comprehensive approach to environmental aw
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RASPBERRY PI 5 INSTALLATION PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
   <img src="misc/raspberrypi5_img.jpg" alt="Raspberry Pi 5" width="60%">
+
+### Raspberry Pi 5 Pinout <a class="anchor" id="raspberry-pi-5"></a>
+
   <img src="misc/pi5pinout.png" alt="Raspberry Pi 5 Pin Out" width="60%">
 </p>
 
@@ -545,7 +548,8 @@ The XRP board communicates with the Raspberry Pi 5 via **serial UART** connectio
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD CAMERA MOUNTING PHOTO AND FIELD OF VIEW DIAGRAM ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="misc/picam2img.jpg" alt="PiCam2 Mounted on Delta Bot" width="60%">
+  <img src="misc/picam2img.jpg" alt="PiCam2 Mounted on Delta Bot" width="60%">   
+### Camera Mount Drawing
   <img src="misc/toppart_drawing.png" alt="PiCam2 Mounted on Delta Bot" width="60%">
 </p>
 
