@@ -658,7 +658,7 @@ The LiDAR provides complete environmental awareness that ultrasonics simply cann
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD IMU MOUNTING PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/imu-sensor.jpg" alt="LSM6DSOX IMU" width="60%">
+  <img src="misc/IMU_pic.jpg" alt="LSM6DSOX IMU" width="60%">
 </p>
 
 **Technical Specifications:**
