@@ -1,0 +1,33 @@
+Red - 5v
+White - 3.3v
+Black - GND
+Blue - Pi TX
+Yellow - Pi RX
+Orange - Lidar motor PWM
+
+Lidar color
+Red 5V
+Black GND
+Yellow Lidar TX
+Green Lidar RX
+Blue PWM
+
+5V - HV
+GND - X2
+3.3v - LV
+
+PiTX - LV1
+PiRX - LV2
+PiMotor - LV3
+
+LiRX - HV1
+LiTX - HV2
+LiMotor - HV3
+
+Motor encoder +
+VCC BattV+
+GND BattV- XRPV-
+INT1 XRP MotorV+
+INT2 XRP MotorV-
+MotorAV+ NewMotorV+
+MotorAV- NewMotorV-
