@@ -323,7 +323,10 @@ The custom motor design eliminates the need for a differential while providing:
 ### Parallel Linkage Design
 
 After experimenting with Ackermann steering and direct servo-to-wheel connections, we settled on a **parallel linkage mechanism** for its simplicity, reliability, and sufficient turning radius.
-
+<p align="center">
+   <img src="misc/Parallel_linkage_drawing.png" alt="Parallel Linkage View" width="80%">
+   <img src="misc/Linkage_Drawing.png" alt="Linkage View" width="80%">
+</p>
 **Key Components:**
 - **SG90 9g Micro Servo Motor**
   - Torque: 1.8 kg·cm (4.8V)
@@ -361,7 +364,7 @@ While not true Ackermann steering (which would provide optimal tire scrub reduct
 The rear axle is the mechanical heart of Delta Bot, directly connecting both rear wheels through the custom motor assembly.
 
 **Axle Design:**
-- **Material:** [Specify material - steel rod, aluminum, 3D printed composite?]
+- **Material:** 3D Printed in PLA
 - **Diameter:** [Specify diameter in mm]
 - **Length:** Spans the full width of the chassis, passing through the motor housing
 - **Bearings:** 3D printed bearing holders on each side maintain axle alignment
@@ -476,7 +479,14 @@ Delta Bot's sensor suite represents a comprehensive approach to environmental aw
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RASPBERRY PI 5 INSTALLATION PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/raspberry-pi-5.jpg" alt="Raspberry Pi 5" width="60%">
+  <img src="misc/raspberrypi5_img.jpg" alt="Raspberry Pi 5" width="60%">
+</p>
+
+
+### Raspberry Pi 5 Pinout <a class="anchor" id="raspberry-pi-5"></a>
+
+<p align="center">
+  <img src="misc/pi5pinout.png" alt="Raspberry Pi 5 Pin Out" width="60%">
 </p>
 
 The **Raspberry Pi 5** serves as Delta Bot's main brain, handling all high-level processing tasks.
@@ -513,7 +523,7 @@ After struggling with Arduino Uno (insufficient processing power and poor camera
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD XRP BOARD PHOTO AND CONNECTION DIAGRAM ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/xrp-board.jpg" alt="XRP Controller Board" width="60%">
+  <img src="misc/XRPBoard_img.jpg" alt="XRP Controller Board" width="60%">
 </p>
 
 The **XRP (Experiential Robotics Platform) Controller Board** serves as the motor control and sensor interface subsystem.
@@ -541,7 +551,15 @@ The XRP board communicates with the Raspberry Pi 5 via **serial UART** connectio
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD CAMERA MOUNTING PHOTO AND FIELD OF VIEW DIAGRAM ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/picam2-mount.jpg" alt="PiCam2 Mounted on Delta Bot" width="60%">
+  <img src="misc/picam2img.jpg" alt="PiCam2 Mounted on Delta Bot" width="60%">   
+</p>
+
+  
+### Camera Mount Drawing
+
+
+<p align="center">
+  <img src="misc/toppart_drawing.png" alt="PiCam2 Mounted on Delta Bot" width="60%">
 </p>
 
 **Specifications:**
@@ -572,7 +590,13 @@ The Pi 5 runs **OpenCV** (Python) for real-time image processing:
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD RPLIDAR MOUNTING PHOTO AND SCANNING VISUALIZATION ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/rplidar-mount.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
+  <img src="misc/Lidarimg.jpg" alt="RPLidar A2M12 on Delta Bot" width="60%">
+</p>
+
+### Lidar Mount Drawing
+
+<p align="center">
+  <img src="misc/LidarMount_drawing.png" alt="RPLidar A2M12 on Delta Bot" width="60%">
 </p>
 
 The **RPLidar A2M12** is Delta Bot's primary navigation sensor, providing 360-degree environmental mapping.
@@ -634,7 +658,7 @@ The LiDAR provides complete environmental awareness that ultrasonics simply cann
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD IMU MOUNTING PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/imu-sensor.jpg" alt="LSM6DSOX IMU" width="60%">
+  <img src="misc/IMU_pic.jpg" alt="LSM6DSOX IMU" width="60%">
 </p>
 
 **Technical Specifications:**
@@ -686,7 +710,7 @@ The IMU provides **absolute angular velocity measurement** independent of wheel 
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD ULTRASONIC SENSOR MOUNTING PHOTO ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/ultrasonic-sensor.jpg" alt="HC-SR04 Ultrasonic Sensor" width="60%">
+  <img src="misc/Ultrasonic_img.jpg" alt="HC-SR04 Ultrasonic Sensor" width="60%">
 </p>
 
 **Technical Specifications:**
