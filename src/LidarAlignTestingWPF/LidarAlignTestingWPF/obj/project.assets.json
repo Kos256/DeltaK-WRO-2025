@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kosai\\source\\repos\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\LidarAlignTestingWPF.csproj",
+      "projectUniqueName": "C:\\Users\\kosai\\source\\repos\\DeltaK-WRO-2025\\src\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\LidarAlignTestingWPF.csproj",
       "projectName": "LidarAlignTestingWPF",
-      "projectPath": "C:\\Users\\kosai\\source\\repos\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\LidarAlignTestingWPF.csproj",
+      "projectPath": "C:\\Users\\kosai\\source\\repos\\DeltaK-WRO-2025\\src\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\LidarAlignTestingWPF.csproj",
       "packagesPath": "C:\\Users\\kosai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kosai\\source\\repos\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\obj\\",
+      "outputPath": "C:\\Users\\kosai\\source\\repos\\DeltaK-WRO-2025\\src\\LidarAlignTestingWPF\\LidarAlignTestingWPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
