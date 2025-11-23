@@ -61,7 +61,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kabir - Project Manager & Documentation Lead
 <p align="center">
-  <img src="./misc/kabir.jpg" alt="Kabir" width="80%">
+  <img src="./misc/kabir.jpg" alt="Kabir" width="60%">
 </p>
 
 **Age:** 15
@@ -76,7 +76,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kosain - Lead Programmer
 <p align="center">
-  <img src="./team-photos/kosain.jpg" alt="Kosain" width="80%">
+  <img src="./team-photos/kosain.jpg" alt="Kosain" width="60%">
 </p>
 
 **Age:** 16
@@ -91,7 +91,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Rayyan - Lead Hardware & Construction
 <p align="center">
-  <img src="./misc/rayyan.jpg" alt="Rayyan" width="80%">
+  <img src="./misc/rayyan.jpg" alt="Rayyan" width="60%">
 </p>
 
 **Age:** 15
@@ -109,7 +109,7 @@ Outside robotics, I enjoy fishing, building natural habitat aquariums, rowing as
 
 ### Ali Saif - Coach
 <p align="center">
-  <img src="./misc/Ali.jpg" alt="Ali Saif" width="80%">
+  <img src="./misc/Ali.jpg" alt="Ali Saif" width="60%">
 </p>
 
 **Role:** Team Coach
