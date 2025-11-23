@@ -61,7 +61,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kabir - Project Manager & Documentation Lead
 <p align="center">
-  <img src="./team-photos/kabir.jpg" alt="Kabir" width="80%">
+  <img src="./misc/kabir.jpg" alt="Kabir" width="80%">
 </p>
 
 **Age:** 15
@@ -91,7 +91,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Rayyan - Lead Hardware & Construction
 <p align="center">
-  <img src="./team-photos/rayyan.jpg" alt="Rayyan" width="80%">
+  <img src="./misc/rayyan.jpg" alt="Rayyan" width="80%">
 </p>
 
 **Age:** 15
@@ -100,22 +100,22 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 **Role:** Lead Hardware & Construction
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD RAYYAN'S DETAILED DESCRIPTION ⚠️⚠️⚠️ -->
-<!-- Include: His building experience, mechanical interests, problem-solving approach, previous projects, hobbies outside robotics -->
-**Description:** [Add Rayyan's personal description here - discuss his hands-on experience with 3D printing, CAD design, mechanical assembly, what mechanical concepts fascinate him (gears, linkages, structural integrity), how he approaches debugging hardware issues, any previous building projects, and his interests outside of robotics like sports or other hobbies]
+
+**Description:** Hi ! I’m Rayyan, I have been passionate about robotics, engineering, and hands-on building for as long as I can remember. My STEM journey began with the First LEGO League Junior National Competition in 2019, and since then I’ve developed strong skills in 3D printing, CAD design, and mechanical construction. I’m especially fascinated by gears, linkages, and structural integrity, and I love modifying and customizing RC cars into high-speed performance builds.
+As the Lead Hardware & Construction member of Team Delta K, I designed, assembled, and 3D-printed our autonomous robot for the WRO Future Engineers category. My interest in fabrication also inspired me to co-found @rk3dprints, where my teammate and I create innovative 3D-printed products.
+Outside robotics, I enjoy fishing, building natural habitat aquariums, rowing as Captain of my school’s team, and exploring culinary arts. I’m excited to gain international exposure at WRO 2025 and take my passion for innovation to the global stage.
 
 ---
 
 ### Ali Saif - Coach
 <p align="center">
-  <img src="./team-photos/ali-saif.jpg" alt="Ali Saif" width="80%">
+  <img src="./misc/Ali.jpg" alt="Ali Saif" width="80%">
 </p>
 
 **Role:** Team Coach
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD COACH ALI SAIF'S DETAILED DESCRIPTION ⚠️⚠️⚠️ -->
-<!-- Include: His background/expertise, teaching experience, coaching philosophy, technical expertise, previous coaching success, what he emphasizes most -->
-**Description:** [Add Ali Saif's background - his educational/professional background, how long he's been coaching robotics/STEM, his coaching philosophy (hands-on learning, fostering student independence, strategic thinking), specific technical expertise he brings (programming, electronics, mechanical design), any previous successful teams he's coached, and what he emphasizes most when mentoring the team]
+**Description:** Leveraging a robust engineering background, Ali Saif is an entrepreneur dedicated to solving challenging market problems through innovation. He combine technical rigor with business acumen to build and grow companies that are disrupting the technology landscape.
+ 
 
 ---
 
