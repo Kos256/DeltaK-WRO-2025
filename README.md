@@ -3,9 +3,6 @@
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM BANNER IMAGE HERE ⚠️⚠️⚠️ -->
 ![Banner](./misc/banner.png)
 
-[![Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)](#)
-<!-- ⚠️⚠️⚠️ REMINDER: ADD SOCIAL MEDIA LINKS (Instagram, YouTube, etc.) ⚠️⚠️⚠️ -->
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](#)
 [![Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](#)
 
 This repository contains the complete documentation for Team Delta K's autonomous robot for the 2025 World Robot Olympiad Future Engineers competition. Delta Bot was designed, built, and programmed by three dedicated students from Karachi, Pakistan, representing Haque Academy on the international stage.
@@ -124,7 +121,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Team Photo
 <p align="center">
-  <img src="./team-photos/team-image.jpg" alt="Team Delta K" width="80%">
+  <img src="./misc/teamimg.jpg" alt="Team Delta K" width="80%">
 </p>
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM FORMATION STORY & DYNAMICS ⚠️⚠️⚠️ -->
