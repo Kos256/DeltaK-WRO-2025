@@ -62,6 +62,31 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD ALL TEAM MEMBER PHOTOS IN ./team-photos/ FOLDER ⚠️⚠️⚠️ -->
 
+<a name="team-introduction"></a>
+## 🧑‍💻 Team Introduction & Team Information
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="/misc/kosain.jpg" width="100%" style="border-radius: 8px;"><br>
+      <strong>Kosain</strong><br>
+      <em>Lead Programmer</em><br>
+      <sub>Sensor Integration, Logic, Obstacle Avoidance</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="/misc/rayyan.jpg" width="100%" style="border-radius: 8px;"><br>
+      <strong>MOHAMED MIFZAL MAHAROOF</strong><br>
+      <em>Hardware Engineer</em><br>
+      <sub>Wiring, Circuit Design, Power Management</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="/misc/kabir.jpg" width="100%" style="border-radius: 8px;"><br>
+      <strong>AARNAV BHARGAVA</strong><br>
+      <em>Chief Strategist</em><br>
+      <sub>Planning, Analysis, Iteration, Strategy Making</sub>
+    </td>
+  </tr>
+</table>
+
 ### Kabir - Project Manager & Documentation Lead
 <p align="center">
   <img src="./team-photos/kabir.jpg" alt="Kabir" width="80%">

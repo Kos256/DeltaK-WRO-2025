@@ -70,10 +70,8 @@ while True:
     upper_red1 = np.array([8, 255, 255])
     lower_red2 = np.array([170, 100, 100])
     upper_red2 = np.array([179, 255, 255])
-    # lower_green = np.array([35, 100, 100])
-    # upper_green = np.array([85, 255, 255])
-    lower_green = np.array([35, 80, 100])
-    upper_green = np.array([130, 255, 255])
+    lower_green = np.array([35, 100, 100])
+    upper_green = np.array([85, 255, 255])
 
     # Masks
     red_mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
