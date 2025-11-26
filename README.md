@@ -238,7 +238,6 @@ This upgrade was expensive but absolutely critical to our success.
 
 ### **Iteration 4: Mechanical Refinement & Custom Motor (Months 5-6)**
 With electronics stable, we focused on mechanical optimization:
-- **Custom motor design:** We disassembled TT motor bodies and integrated DG01D-E encoders, creating a dual-axle system where the motor sits between both rear wheels
 - **30+ 3D printed parts:** Designed and refined chassis, motor mounts, sensor holders, and linkages
 - **Weight optimization:** Iterative printing reduced unnecessary material while maintaining structural integrity
 - **Parallel linkage steering:** Achieved reliable, precise steering without complex Ackermann geometry
@@ -1601,59 +1600,13 @@ This step-by-step guide will help you replicate Delta Bot from scratch.
 
 ## Step 1: 3D Print All Components
 
-<!-- ⚠️⚠️⚠️ REMINDER: ENSURE ALL STL FILES ARE IN ./3d-models/ FOLDER ⚠️⚠️⚠️ -->
-
 **Printing Settings (Creality K1C):**
-- **Material:** PLA+
-- **Layer Height:** 0.2mm
+- **Material:** PLA+ and ABS
+- **Layer Height:** 0.4mm + 0.6mm
 - **Infill:** 20%
 - **Print Speed:** 150mm/s
-- **Supports:** Yes (for overhangs > 45°)
+- **Supports:** Yes (for overhangs > 60°)
 - **Brim:** Yes (for large flat parts to prevent warping)
-
-**Components to Print:**
-
-1. **Chassis Components:**
-   - `chassis_base.stl` (main platform)
-   - `chassis_front.stl` (front section)
-   - `chassis_rear.stl` (rear section)
-
-2. **Motor System:**
-   - `motor_mount_left.stl`
-   - `motor_mount_right.stl`
-   - `axle_holder_left.stl`
-   - `axle_holder_right.stl`
-   - `custom_motor_housing.stl`
-
-3. **Steering Components:**
-   - `front_axle_left.stl`
-   - `front_axle_right.stl`
-   - `steering_linkage.stl` (×2)
-   - `servo_mount.stl`
-
-4. **Sensor Mounts:**
-   - `lidar_tower.stl`
-   - `lidar_mounting_plate.stl`
-   - `camera_mount.stl`
-   - `ultrasonic_bracket.stl`
-
-5. **Electronics Mounting:**
-   - `pi5_mounting_tray.stl`
-   - `xrp_board_bracket.stl`
-   - `battery_compartment.stl`
-   - `voltage_regulator_housing.stl`
-
-6. **Cable Management:**
-   - `cable_clip.stl` (×10)
-   - `wire_routing_channel.stl`
-
-**Print Time:** Approximately 48-60 hours total
-
-**Post-Processing:**
-- Remove supports carefully
-- Sand any rough edges
-- Test fit all parts before assembly
-
 ---
 
 ## Step 2: Assemble Custom Motor
@@ -1953,7 +1906,7 @@ Complete breakdown of all expenses for Delta Bot's development.
 | PiCam2 | 1 | 33.00 | 33.00 |
 | RPLidar A2M12 | 1 | 210.00 | 210.00 |
 | XRP Controller Board (with LSM6DSOX IMU) | 1 | 60.00 | 60.00 |
-| Custom TT Motor with DG01D-E Encoder | 1 | 23.00 | 23.00 |
+| Brushed DC Motor + encoder | 1 | 23.00 | 23.00 |
 | SG90 9g Micro Servo | 1 | 2.00 | 2.00 |
 | HC-SR04 Ultrasonic Sensor | 1 | 14.00 | 14.00 |
 | LiPo Battery (1500mAh, 7.4V) | 3 | 18.00 | 54.00 |
