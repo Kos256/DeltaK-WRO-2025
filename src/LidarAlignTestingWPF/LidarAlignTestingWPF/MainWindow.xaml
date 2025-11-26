@@ -1,0 +1,56 @@
+﻿<Window x:Class="LidarAlignTestingWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LidarAlignTestingWPF"
+        mc:Ignorable="d"
+        Title="LiDAR Aligning Experiment" Width="600" ResizeMode="CanResize" Background="#FF1E1E1E" Foreground="White" FontSize="20" FontFamily="Consolas" MinWidth="550" MinHeight="440">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="LiDAR auto align test" VerticalAlignment="Top" FontSize="40" Margin="20,20,0,0"/>
+        <Rectangle Height="5" Margin="500,30,0,0" VerticalAlignment="Top" Fill="White"/>
+        <Rectangle Height="5" Margin="500,40,0,0" VerticalAlignment="Top" Fill="White"/>
+        <Rectangle Height="5" Margin="500,50,0,0" VerticalAlignment="Top" Fill="White"/>
+        <Grid x:Name="LidarExperimentGrid" Width="300" Height="300" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,0,0,20">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF393939"/>
+                    <GradientStop Color="#FF393939" Offset="1"/>
+                    <GradientStop Color="#FF484848" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border BorderThickness="2,2,2,2">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF898989"/>
+                        <GradientStop Color="#FF898989" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+            </Border>
+            <Canvas x:Name="lidarCanvas" Margin="2,2,2,2">
+                <Path x:Name="obstaclePath" Canvas.Left="0" Stroke="Red" Stretch="Fill" Canvas.Top="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Path.Data>
+                        <PathGeometry Figures="M13.027197,333.26107 L60.7,20.699997 342.35181,53.157972 326.69152,164.91343 152.41034,148.42052 124.06379,353.01783 z"/>
+                    </Path.Data>
+                    <Path.Clip>
+                        <RectangleGeometry Rect="0, 0, 290, 290" RadiusX="0"/>
+                    </Path.Clip>
+                </Path>
+                <Rectangle x:Name="lidarCaster" Width="5" Height="5" Canvas.Left="87.626" Canvas.Top="194.826" Fill="#FFFFD400" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="45"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+        <TextBlock HorizontalAlignment="Right" Margin="0,0,10,10" TextWrapping="Wrap" Text="DeltaK 2025" VerticalAlignment="Bottom" FontSize="10" FontWeight="Bold" FontStyle="Italic" Opacity="0.5"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Simulated Lidar OUT" VerticalAlignment="Bottom" Margin="20,0,0,320" FontSize="18"/>
+
+    </Grid>
+</Window>
