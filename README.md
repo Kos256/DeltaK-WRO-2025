@@ -267,7 +267,7 @@ Delta Bot's mobility system is the result of extensive iteration and custom engi
 <!-- ⚠️⚠️⚠️ REMINDER: ADD IMAGES OF CUSTOM MOTOR ASSEMBLY ⚠️⚠️⚠️ -->
 <!-- Include: Disassembled motor photos, encoder integration photos, dual-axle configuration photos -->
 <p align="center">
-  <img src="./hardware-photos/custom-motor-assembly.jpg" alt="Custom Motor Assembly" width="80%">
+  <img src="./misc/motor.jpg" alt="Custom Motor Assembly" width="80%">
 </p>
 
 ### Design Philosophy
