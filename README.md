@@ -784,7 +784,7 @@ The XRP board's RP2040 microcontroller handles encoder counting in hardware, pre
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD POWER SYSTEM DIAGRAM AND BATTERY PLACEMENT PHOTOS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/power-system.jpg" alt="Power System Layout" width="80%">
+  <img src="./misc/diagram.jpg" alt="Power System Layout" width="80%">
 </p>
 
 Delta Bot's power system is designed for **high capacity, voltage flexibility, and safety**.
@@ -847,23 +847,6 @@ A custom power distribution board (Pi HAT) mounts directly on the Raspberry Pi 5
 3. **Current Monitoring:** Detect abnormal current draw (stalled motor, short circuits)
 4. **Emergency Stop:** Physical button to immediately cut all power
 
----
-
-## Circuit Diagram <a class="anchor" id="circuit-diagram"></a>
-
-<!-- ⚠️⚠️⚠️ REMINDER: CREATE AND ADD COMPLETE CIRCUIT DIAGRAM ⚠️⚠️⚠️ -->
-<!-- Include: Battery connections, voltage regulators, all sensor connections, motor driver, servo, communication lines (UART, I2C) -->
-
-<p align="center">
-  <img src="./electrical-diagram/delta-bot-circuit.png" alt="Delta Bot Complete Circuit Diagram" width="100%">
-</p>
-
-**Diagram shows:**
-- Power distribution from batteries through voltage regulators
-- Raspberry Pi 5 connections (USB for camera and LiDAR, GPIO for UART to XRP)
-- XRP board connections (motor driver, servo, IMU, encoder, ultrasonic)
-- Communication protocols (UART between Pi and XRP, I2C for IMU)
-- Ground connections and power planes
 
 ---
 
@@ -2371,10 +2354,9 @@ International competition, here we come! We're already planning improvements: be
 </p>
 
 <p align="center">
-  <img src="./team-photos/team-celebration.jpg" alt="Team Delta K Celebrating 3rd Place" width="80%">
+  <img src="./misc/nationalspic.jpg" alt="Team Delta K Celebrating 3rd Place" width="80%">
 </p>
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM CELEBRATION PHOTO ⚠️⚠️⚠️ -->
 
 ---
 
@@ -2433,7 +2415,7 @@ International competition, here we come! We're already planning improvements: be
 
 ## Changelog
 
-<!-- ⚠️⚠️⚠️ REMINDER: UPDATE CHANGELOG AS YOU MAKE IMPROVEMENTS ⚠️⚠️⚠️ -->
+
 
 **Future Updates:**
 - [ ] Add parking challenge improvements
@@ -2498,92 +2480,3 @@ A: Most electronics are available from local suppliers in Karachi or online thro
 
 ---
 
-<!-- END OF DOCUMENTATION -->
-
-<!-- ⚠️⚠️⚠️ ============================================ ⚠️⚠️⚠️ -->
-<!-- ⚠️⚠️⚠️ COMPLETE REMINDER CHECKLIST FOR KABIR ⚠️⚠️⚠️ -->
-<!-- ⚠️⚠️⚠️ ============================================ ⚠️⚠️⚠️ -->
-
-<!-- 
-PHOTOS TO ADD:
-✓ Team banner image (./banner.png)
-✓ All team member photos (./team-photos/)
-✓ Team group photo (./team-photos/team-image.jpg)
-✓ Team celebration photo (./team-photos/team-celebration.jpg)
-✓ Robot photos - 6 views (./robot-photos/)
-✓ Custom motor assembly photos (./hardware-photos/)
-✓ Steering system photos (./hardware-photos/)
-✓ All component mounting photos (./hardware-photos/)
-✓ Chassis assembly photos (./hardware-photos/)
-✓ Wheel installation photos (./hardware-photos/)
-✓ Electronics mounting photos (./hardware-photos/)
-✓ Wiring and connections photos (./hardware-photos/)
-✓ Power system photos (./hardware-photos/)
-✓ Testing and calibration photos
-
-3D MODEL BLUEPRINTS TO ADD:
-✓ All STL files in ./3d-models/ folder
-✓ Technical drawings/blueprints for each component
-✓ Add blueprint images in relevant sections
-
-CODE TO ADD:
-✓ Complete Python code for Raspberry Pi 5 (./code/raspberry-pi/)
-✓ Complete MicroPython code for XRP board (./code/xrp-board/)
-✓ Code for each subsystem:
-  - Main control loop (main.py)
-  - LiDAR mapping (sensors/lidar.py)
-  - Color detection (vision/color_detection.py)
-  - IMU integration (sensors/imu.py)
-  - Motor control (control/motor_control.py)
-  - Obstacle avoidance (navigation/obstacle_avoidance.py)
-
-DIAGRAMS TO CREATE AND ADD:
-✓ Complete circuit diagram (./electrical-diagram/)
-✓ Software architecture diagram
-✓ Sensor fusion diagram
-✓ Computer vision pipeline diagram
-✓ Qualification round strategy diagram
-✓ Obstacle avoidance strategy diagram
-✓ Parking challenge sequence diagram
-✓ Power distribution diagram
-
-DATA TO FILL IN:
-✓ Robot weight measurement
-✓ Robot dimensions (L x W x H)
-✓ Battery runtime data
-✓ Success rate percentages from testing
-✓ Actual HSV threshold values used
-✓ Tool costs (if purchased)
-✓ Total code line count
-✓ Testing hours estimate
-✓ Practice run statistics
-✓ Gear ratio specification
-✓ Motor voltage specification
-
-TEXT TO COMPLETE:
-✓ Rayyan's detailed description
-✓ Coach Ali Saif's detailed description
-✓ Team formation story
-✓ Team dynamic description
-✓ Parking challenge failure analysis
-✓ Social media links
-✓ Contact information
-✓ Any additional acknowledgments
-
-VIDEOS TO UPLOAD:
-✓ Competition performance video (YouTube)
-✓ Testing videos (./testing-videos/)
-
-ADDITIONAL DOCUMENTS TO CREATE:
-✓ Calibration guide (./documentation/calibration-guide.md)
-✓ Troubleshooting guide (./documentation/troubleshooting.md)
-✓ Competition checklist (./documentation/competition-checklist.md)
-
-REMINDERS FOR ONGOING UPDATES:
-✓ Update changelog as improvements are made
-✓ Add future improvements to FAQ
-✓ Keep version history current
-✓ Update performance metrics after international competition
--->
-
-<!-- ⚠️⚠️⚠️ END OF REMINDER CHECKLIST ⚠️⚠️⚠️ -->
