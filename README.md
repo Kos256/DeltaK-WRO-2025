@@ -445,7 +445,7 @@ All 3D models are available in the `./3d-models/` directory in STL format, ready
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD WHEEL PHOTOS AND TREAD PATTERN CLOSE-UPS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./hardware-photos/wheels.jpg" alt="Delta Bot Wheels" width="80%">
+  <img src="./misc/wheels.jpg" alt="Delta Bot Wheels" width="80%">
 </p>
 
 **Specifications:**
