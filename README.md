@@ -176,13 +176,9 @@ Delta Bot represents our team's sixth month of intensive engineering, combining 
 | **Top View** | **Bottom View** |
 | <img src="./robot-photos/top.png" width="90%" /> | <img src="./robot-photos/bottom.png" width="85%" /> |
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD ROBOT SPECIFICATIONS TABLE ⚠️⚠️⚠️ -->
-<!-- ⚠️⚠️⚠️ REMINDER: MEASURE AND ADD ROBOT WEIGHT ⚠️⚠️⚠️ -->
-<!-- ⚠️⚠️⚠️ REMINDER: MEASURE AND ADD ROBOT DIMENSIONS (Length x Width x Height) ⚠️⚠️⚠️ -->
-
 **Key Specifications:**
-- **Dimensions:** [Length] cm x [Width] cm x [Height] cm
-- **Weight:** ~1 KG
+- **Dimensions:** 270mm x 190mm x 100mm
+- **Weight:** 1030g
 - **Brain:** Raspberry Pi 5 (8-core CPU, 8GB RAM)
 - **Vision:** PiCam2 with OpenCV processing
 - **Mapping:** RPLidar A2M12 (360° scanning, 12m range)
@@ -190,13 +186,11 @@ Delta Bot represents our team's sixth month of intensive engineering, combining 
 - **Drive System:** Custom dual-axle motor with DG01D-E encoder
 - **Steering:** SG90 micro servo with parallel linkage mechanism
 - **Power:** 3x 1500mAh LiPo batteries with voltage regulation
-- **Construction:** 30+ 3D printed PLA+ components
+- **Construction:** 3D printed PLA+ & ABS components
 
 ---
-
+<!-- uncomment this when performance video is uploaded
 ## Our Performance Video <a class="anchor" id="video"></a>
-
-<!-- ⚠️⚠️⚠️ REMINDER: UPLOAD COMPETITION/TESTING VIDEO TO YOUTUBE AND ADD LINK HERE ⚠️⚠️⚠️ -->
 
 Watch Delta Bot in action [here](https://https://google.com)
 **(link to youtube video has yet to be added)**
@@ -205,9 +199,8 @@ Watch Delta Bot in action [here](https://https://google.com)
 - **Qualification Round Best Time:** 14 seconds
 - **Obstacle Round Score:** 10.0 (14 points)
 - **National Competition Result:** 3rd Place (Qualified for International Competition)
-
+-->
 ---
-
 ## Development Journey <a class="anchor" id="development-journey"></a>
 
 Delta Bot's development spanned six months and four major design iterations, each addressing critical challenges and pushing our capabilities further.
@@ -264,7 +257,6 @@ Delta Bot's mobility system is the result of extensive iteration and custom engi
 
 ## Custom Motor Design <a class="anchor" id="custom-motor-design"></a>
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD IMAGES OF CUSTOM MOTOR ASSEMBLY ⚠️⚠️⚠️ -->
 <!-- Include: Disassembled motor photos, encoder integration photos, dual-axle configuration photos -->
 <p align="center">
   <img src="./misc/motor.jpg" alt="Custom Motor Assembly" width="80%">
@@ -287,8 +279,6 @@ Starting with a **TT Motor Yellow Geared DC Motor body**, we performed the follo
 3. **Dual-Axle Slots:** Machined slots on both sides of the motor housing to allow the axle to pass completely through
 4. **Reassembly with Precision:** Reassembled the motor with the encoder securely mounted, ensuring no mechanical play
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD 3D MODEL/BLUEPRINT OF CUSTOM MOTOR MOUNTING SYSTEM ⚠️⚠️⚠️ -->
-
 **Technical Specifications:**
 - **Base Motor:** TT Motor Yellow Geared DC Motor
 - **Encoder:** DG01D-E (quadrature encoder for precise position feedback)
@@ -305,13 +295,9 @@ The custom motor design eliminates the need for a differential while providing:
 - **Simplified control:** Both rear wheels are mechanically locked together, simplifying motor control algorithms
 - **Compact footprint:** The motor doesn't protrude from the chassis, reducing overall robot size
 
-<!-- ⚠️⚠️⚠️ REMINDER: ADD 3D PRINTED MOTOR MOUNT BLUEPRINTS ⚠️⚠️⚠️ -->
-
 ---
 
 ## Steering System <a class="anchor" id="steering-system"></a>
-
-<!-- ⚠️⚠️⚠️ REMINDER: ADD STEERING MECHANISM PHOTOS AND DIAGRAMS ⚠️⚠️⚠️ -->
 <p align="center">
   <img src="misc/frontassembly_drawing.png" alt="Steering System" width="80%">
 </p>
