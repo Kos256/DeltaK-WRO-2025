@@ -76,7 +76,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kosain - Lead Programmer
 <p align="center">
-  <img src="./t-photos/kosain.jpg" alt="Kosain" width="60%">
+  <img src="./t-photos/kosain0.jpg" alt="Kosain" width="60%">
 </p>
 
 **Age:** 16
