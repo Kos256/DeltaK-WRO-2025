@@ -1928,29 +1928,6 @@ Complete breakdown of all expenses for Delta Bot's development.
 | LEGO Wheels | Insufficient grip | 20.00 |
 | **Tested Parts Subtotal** | | **230.00** |
 
-## Tools and Equipment
-
-<!-- ⚠️⚠️⚠️ REMINDER: ADD ACTUAL TOOL COSTS IF YOU PURCHASED THEM ⚠️⚠️⚠️ -->
-
-| Tool | Cost (CAD) |
-|------|------------|
-| Creality K1C 3D Printer | [Add cost if purchased] |
-| Soldering Station | [Add cost if purchased] |
-| Multimeter | [Add cost if purchased] |
-| Wire Strippers | [Add cost if purchased] |
-| Screwdriver Set | [Add cost if purchased] |
-| Hot Glue Gun | [Add cost if purchased] |
-| **Tools Subtotal** | **[Add total]** |
-
-## Competition and Miscellaneous
-
-| Item | Cost (CAD) |
-|------|------------|
-| Team Registration Fee | [Add if applicable] |
-| Competition Mat (for practice) | [Add if purchased] |
-| Traffic Sign Models (3D printed) | 15.00 |
-| Shipping and Import Fees | ~50.00 |
-| **Miscellaneous Subtotal** | **~65.00** |
 
 ---
 
@@ -1963,7 +1940,6 @@ Complete breakdown of all expenses for Delta Bot's development.
 | 3D Printing Materials | 160.00 |
 | Wiring and Electrical | 88.00 |
 | Parts Tested (Not Used) | 230.00 |
-| Tools and Equipment | [Add total] |
 | Competition and Misc. | ~65.00 |
 | **GRAND TOTAL** | **~1,279.00 + Tools** |
 
