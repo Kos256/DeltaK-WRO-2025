@@ -170,11 +170,11 @@ Delta Bot represents our team's sixth month of intensive engineering, combining 
 
 | Front View | Back View | 
 | :--: | :--: | 
-| <img src="./robot-photos/front.png" width="90%" /> | <img src="./robot-photos/back.png" width="85%" /> |
+| <img src="./v-photos/recovery/bot1.jpeg" width="90%" /> | <img src="./v-photos/recovery/bot2.jpeg" width="85%" /> |
 | **Left View** | **Right View** |
-| <img src="./robot-photos/left.png" width="90%" /> | <img src="./robot-photos/right.png" width="85%" /> |
+| <img src="./v-photos/recovery/bot3.jpeg" width="90%" /> | <img src="./v-photos/recovery/bot4.jpeg" width="85%" /> |
 | **Top View** | **Bottom View** |
-| <img src="./robot-photos/top.png" width="90%" /> | <img src="./robot-photos/bottom.png" width="85%" /> |
+| <img src="./v-photos/recovery/bot5.jpeg" width="90%" /> | <img src="./v-photos/recovery/bot6.jpeg" width="85%" /> |
 
 **Key Specifications:**
 - **Dimensions:** 270mm x 190mm x 100mm
