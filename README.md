@@ -1,7 +1,7 @@
 <center><h1> Delta K - WRO 2025 Future Engineers </h1></center>
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM BANNER IMAGE HERE ⚠️⚠️⚠️ -->
-![Banner](./misc/banner.png)
+![Banner](./t-photos/banner.png)
 
 [![Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](#)
 
@@ -61,7 +61,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kabir - Project Manager & Documentation Lead
 <p align="center">
-  <img src="./misc/kabir.jpg" alt="Kabir" width="60%">
+  <img src="./t-photos/kabir.jpg" alt="Kabir" width="60%">
 </p>
 
 **Age:** 15
@@ -76,7 +76,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Kosain - Lead Programmer
 <p align="center">
-  <img src="./misc/kosain.jpg" alt="Kosain" width="60%">
+  <img src="./t-photos/kosain.jpg" alt="Kosain" width="60%">
 </p>
 
 **Age:** 16
@@ -91,7 +91,7 @@ This repository contains the complete documentation for Team Delta K's autonomou
 
 ### Rayyan - Lead Hardware & Construction
 <p align="center">
-  <img src="./misc/rayyan.jpg" alt="Rayyan" width="60%">
+  <img src="./t-photos/rayyan.jpg" alt="Rayyan" width="60%">
 </p>
 
 **Age:** 15
@@ -109,7 +109,7 @@ Outside robotics, I enjoy fishing, building natural habitat aquariums, rowing as
 
 ### Ali Saif - Coach
 <p align="center">
-  <img src="./misc/Ali.jpg" alt="Ali Saif" width="60%">
+  <img src="./t-photos/Ali.jpg" alt="Ali Saif" width="60%">
 </p>
 
 **Role:** Team Coach
@@ -121,7 +121,7 @@ Outside robotics, I enjoy fishing, building natural habitat aquariums, rowing as
 
 ### Team Photo
 <p align="center">
-  <img src="./misc/teamimg.jpg" alt="Team Delta K" width="80%">
+  <img src="./t-photos/teamimg.jpg" alt="Team Delta K" width="80%">
 </p>
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD TEAM FORMATION STORY & DYNAMICS ⚠️⚠️⚠️ -->
@@ -259,7 +259,7 @@ Delta Bot's mobility system is the result of extensive iteration and custom engi
 
 <!-- Include: Disassembled motor photos, encoder integration photos, dual-axle configuration photos -->
 <p align="center">
-  <img src="./misc/motor.jpg" alt="Custom Motor Assembly" width="80%">
+  <img src="./t-photos/motor.jpg" alt="Custom Motor Assembly" width="80%">
 </p>
 
 ### Design Philosophy
@@ -431,7 +431,7 @@ All 3D models are available in the `./3d-models/` directory in STL format, ready
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD WHEEL PHOTOS AND TREAD PATTERN CLOSE-UPS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./misc/wheels.jpg" alt="Delta Bot Wheels" width="80%">
+  <img src="./t-photos/wheels.jpg" alt="Delta Bot Wheels" width="80%">
 </p>
 
 **Specifications:**
@@ -770,7 +770,7 @@ The XRP board's RP2040 microcontroller handles encoder counting in hardware, pre
 
 <!-- ⚠️⚠️⚠️ REMINDER: ADD POWER SYSTEM DIAGRAM AND BATTERY PLACEMENT PHOTOS ⚠️⚠️⚠️ -->
 <p align="center">
-  <img src="./misc/diagram.jpg" alt="Power System Layout" width="80%">
+  <img src="./t-photos/diagram.jpg" alt="Power System Layout" width="80%">
 </p>
 
 Delta Bot's power system is designed for **high capacity, voltage flexibility, and safety**.
@@ -2285,7 +2285,7 @@ International competition, here we come! We're already planning improvements: be
 </p>
 
 <p align="center">
-  <img src="./misc/nationalspic.jpg" alt="Team Delta K Celebrating 3rd Place" width="80%">
+  <img src="./t-photos/nationalspic.jpg" alt="Team Delta K Celebrating 3rd Place" width="80%">
 </p>
 
 
